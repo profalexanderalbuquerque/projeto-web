@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="intro.js" ></script>
+
+    
+</head>
+<body>
+    <label for="idNome">Nome:</label>
+    <input type="text" id="idNome"><br/>
+    
+    <label for="idIdade">Idade:</label>
+    <input type="text" id="idIdade"><br/> 
+
+    <input type="button" value="Teste" onclick="alert('VINICIUS')">
+    <input type="button" value="Ver Nome" onclick="alert(document.getElementById('idNome').value)">
+    <input type="button" value="Ver Idade" onclick="alert(document.getElementById('idIdade').value)">
+    <input type="button" value="Modificar Div" onclick="preencherNome();">
+    <div id="idDiv">Teste</div>
+</body>
+<script>
+    //preencher o objeto idIdade com o valor 42;
+    document.getElementById('idIdade').value = 42;
+
+    function preencherNome(){
+        let nome = document.getElementById('idNome').value;
+        document.getElementById('idDiv').innerHTML = "<h1>"+nome+"</h1>" ;  
+    }
+</script>
+</html>

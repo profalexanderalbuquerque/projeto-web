@@ -1,0 +1,19 @@
+<variables>
+    <header>
+        <EBELN>String</EBELN>
+        <LIFNR>String</LIFNR>
+        <BEDAT>30-01-2022</BEDAT>
+    </header>
+    <items>
+        <EBELP>teste01</EBELP>
+        <MATNR>String</MATNR>
+        <MENGE>String</MENGE>
+        <NETPR>String</NETPR>
+        <EEIND>String</EEIND>
+        <COD_CLIENTE>String</COD_CLIENTE>
+        <NUMFIXO>string</NUMFIXO>
+        <NUMFIXO2>CAMPO NOVO</NUMFIXO2>
+        <NUMFIXO3>String</NUMFIXO3>
+        <IDORDEM>String</IDORDEM>
+    </items>
+</variables>
