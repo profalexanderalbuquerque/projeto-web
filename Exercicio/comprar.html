@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+
+        form {
+            margin: auto;
+            width: 50%;
+        }
+
+        input[type=text], select {
+            padding: 12px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+
+        #btnGravarPlano {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 12px;
+        }
+    </style>
+</head>
+<body>
+    <form action="/cartao" method="get" onsubmit="return gravar();">
+        <label for="idPlano">Plano:</label>
+        <select id="idPlano" name="idPlano">
+            <option value="b">Básico</option>
+            <option value="p">Profissional</option>
+            <option value="pl">Plus</option>
+        </select>
+        <br/><br/>
+        <label for="idNome">Nome:</label>
+        <input type="text" id="idNome" name="idNome">
+        <br/><br/>
+        <label for="idSobreNome">Sobrenome:</label>
+        <input type="text" id="idSobreNome" name="idSobreNome">
+        <br/><br/>
+        <label for="idCartao">Cartão de Crédito:</label>
+        <input type="text" id="idCartao" name="idCartao" onblur="mascaraCartao(this)" onfocus="retitarFormatacao(this);">
+        <br/><br/>
+        <button id="btnGravarPlano" type="submit">Gravar Plano</button>
+    </form>
+</body>
+<script>
+    function mascaraCartao(campoTexto){
+        campoTexto.value = campoTexto.value.replace(/(\d{4})(\d{4})(\d{4})(\d{4})/g,"\$1.\$2.\$3.\$4");
+    }
+
+    function retitarFormatacao(campoTexto){
+        campoTexto.value = campoTexto.value.replace(/(\.|\/)/g,"");
+    }
+
+    function gravar(){
+        let nome = document.getElementById('idNome');
+        let sobrenome = document.getElementById('idSobreNome');
+        let cartao = document.getElementById('idCartao');
+        let envio = false;
+
+        if(nome.value.length==0){
+            nome.focus();
+        }else if(sobrenome.value.length==0){
+            sobrenome.focus();
+        }else if(cartao.value.length==0){
+            cartao.focus();
+        }else{
+            envio = true;
+        }
+
+        if(envio)
+            return true;
+        else   
+            return false;
+
+    }
+</script>
+</html>

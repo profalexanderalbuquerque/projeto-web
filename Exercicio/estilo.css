@@ -1,0 +1,78 @@
+body{
+    font-family: 'Tahamo', sans-serif;
+    font-size: 10px;
+}
+
+.wrapper-page{
+    text-align: center;
+}
+
+header h1{
+    font-size: 40px;
+}
+
+header h3{
+    font-size: 25px;
+}
+
+.plan{
+    background: #ccc;
+    border: 1px solid #999;
+    width: 200px;
+    box-shadow: 0 0 10px #666;
+    display: inline-block;
+    border-radius: 10px;
+    margin: 20px;
+    font-size: 12px;
+    box-sizing: border-box;
+}
+
+.plan h1{
+    background: #333;
+    /*display: block;*/
+    line-height: 50px;
+    color: white;
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+}
+
+.plan h2{
+    background-color: lightskyblue;
+    line-height: 50px;
+    padding: 0;
+    margin: 0;
+    color: white;
+    
+}
+
+.perUnit{
+    font-size: 10px;
+}
+
+.plan h3{
+    line-height: 25px;
+    padding: 0;
+    margin: 0;
+}
+
+.plan h4{
+    font-size: 15px;
+    color:#666;
+    padding: 0;
+    margin: 0;
+}
+
+.plan ul{
+    width: 60%;
+    font-size: 10px;
+    text-align: left;
+    margin: auto;
+    padding: 10px 0;
+}
+
+figure{
+    margin: 0;
+}
